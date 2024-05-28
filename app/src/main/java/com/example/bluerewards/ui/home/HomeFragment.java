@@ -29,17 +29,13 @@ public class HomeFragment extends Fragment {
 
         DbHelper dbHelper = new DbHelper(getActivity());
         if (user == null){
-            user = dbHelper.getUserById(1); // test data
+            user = dbHelper.getUserById(1); // test data - Jake
         }
         homeViewModel.setUser(user);
 
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
-    }
-
-    private void setUser(){
-
     }
 
     @Override
