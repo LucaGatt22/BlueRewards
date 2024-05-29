@@ -24,6 +24,7 @@ import com.example.bluerewards.MainActivity;
 import com.example.bluerewards.R;
 import com.example.bluerewards.databinding.ActivityLoginBinding;
 
+// The LoginActivity is the first activity which the app loads. After the user logs in, the app starts the MainActivity
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;

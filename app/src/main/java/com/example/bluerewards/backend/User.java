@@ -2,6 +2,8 @@ package com.example.bluerewards.backend;
 
 
 // Store class is found under `stores` package, unlike this `User` class
+
+// User class with id, name, surname, passwordHash and points (properties, constructor, getters and setters)
 public class User {
     private long id;
     private String name;

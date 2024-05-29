@@ -2,6 +2,8 @@ package com.example.bluerewards.backend;
 
 import android.provider.BaseColumns;
 
+
+// The StoreContract class defines the names of the database table Stores and its fields/columns.
 public final class StoreContract {
 
     private StoreContract() {}

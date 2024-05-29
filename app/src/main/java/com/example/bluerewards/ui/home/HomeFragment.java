@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
 
         DbHelper dbHelper = new DbHelper(getActivity());
         if (user == null){
-            user = dbHelper.getUserById(1); // test data - Jake
+            user = dbHelper.getUserById(1); // test data - Jake - has user id 1
         }
         homeViewModel.setUser(user);
 

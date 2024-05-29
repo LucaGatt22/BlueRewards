@@ -13,7 +13,7 @@ public class HomeViewModel extends ViewModel {
 
     public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Welcome to Blue Rewards.");
+        mText.setValue("Welcome to Blue Rewards."); // simple text - no logic compared to the code below
     }
 
     public void setUser(User user) {

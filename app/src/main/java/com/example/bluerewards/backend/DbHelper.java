@@ -28,7 +28,9 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     public void onCreate(SQLiteDatabase db) {
-        createTables(db);
+        createTables(db); // create the tables of the database
+
+        // populate tables created
         populateStores(db);
         populateUsers(db);
     }
@@ -61,6 +63,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 "DROP TABLE IF EXISTS " + UserContract.UserEntry.TABLE_NAME + ";";
     }
 
+    // populateStores(SQLiteDatabase) - populates Stores table
     private void populateStores(SQLiteDatabase db) {
         ArrayList<Store> stores = new ArrayList<>();
         stores.add(new Store(1, "CompMalta", "Bugibba"));
@@ -76,6 +79,7 @@ public class DbHelper extends SQLiteOpenHelper {
         }
     }
 
+    // populateUsers(SQLiteDatabase) - populates Users table
     private void populateUsers(SQLiteDatabase db) {
         ArrayList<User> users = new ArrayList<>();
         users.add(new User(1, "Jake", "Scerri", "lfTM5/`3#Tt7", 0));
@@ -93,11 +97,13 @@ public class DbHelper extends SQLiteOpenHelper {
         }
     }
 
+    // getDbInstance() - gets DB instance from this class
     public SQLiteDatabase getDbInstance() {
         return this.getWritableDatabase();
     }
 
-    public long insertStore(Store store) { // no store is inserted by user in this app
+    // insertStore(Store store) - insert a store entry into the database's Stores table
+    public long insertStore(Store store) { // no store is inserted by the user in this app, so this method, although implemented, is not used
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -109,6 +115,7 @@ public class DbHelper extends SQLiteOpenHelper {
         return id;
     }
 
+    // insertUser(User) - insert a user entry into the database's Users table
     public long insertUser(User user) { // no store is inserted by user in this app
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -123,6 +130,7 @@ public class DbHelper extends SQLiteOpenHelper {
         return id;
     }
 
+    // getStoreById(long) - get a store entry from the database by the store id
     public Store getStoreById(long id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -161,6 +169,7 @@ public class DbHelper extends SQLiteOpenHelper {
         return store;
     }
 
+    // getUserById(long) - get a user entry from the database by the user id
     public User getUserById(long id) {
         SQLiteDatabase db = this.getReadableDatabase();
 

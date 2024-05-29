@@ -2,6 +2,8 @@ package com.example.bluerewards.backend;
 
 import android.provider.BaseColumns;
 
+
+// The UserContract class defines the names of the database table Users and its fields/columns.
 public final class UserContract {
 
     private UserContract() {}
