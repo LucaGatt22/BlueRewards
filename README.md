@@ -1,6 +1,10 @@
 # Blue Rewards
 Android mobile app for the Mobile Computing CIS2208 unit
 
+## Access code
+ - Github link: https://github.com/LucaGatt22/BlueRewards
+ - Clone using the web URL: https://github.com/LucaGatt22/BlueRewards.git
+
 ## First upload
 The Blue Rewards repository resembles the root of the project. The repository was created by sharing my project ot GitHub which allowed me to create a new repository and upload the project via the Android Studio interface and Git.
 
@@ -30,5 +34,6 @@ The app is about giving information to customers based on a points system. It is
  - XML
 
 ## Limitations
- - Do not have the login page integrated with the app, although the Login Views Activity template has been utilised to create the Login page.
-   - Integrate it with the User table existing in the SQLite database.
+ - Validation of user authentication
+ - Lack of personal details
+ - The exmainer of the app can view the documentation uploaded via the UM VLE. Detailed information about these points is provided there.
